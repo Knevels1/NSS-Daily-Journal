@@ -24,7 +24,8 @@ h1,h2,h3,h4,h5,h6 {
 	flex-direction: column;
 
 }
-.formInfo{
+header,
+.formInfo {
 	display: flex;
 	flex-direction: column;
 }
