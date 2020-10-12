@@ -18,7 +18,7 @@ h1,h2,h3,h4,h5,h6 {
   font-family: "Patua One", serif;
   letter-spacing: 2px;
 }
-.Container{
+.contentContainer__left{
 	background-color: aqua;
 	display: flex;
 	flex-direction: column;
@@ -32,9 +32,14 @@ header,
 .name{
 	background-color: aqua;
 }
-.submit{
+.submit,
+.button
+{
 	background-color: blueviolet;
 }
 .footer{
 	text-align: center;
+}
+.entryLog {
+	background-color: aqua;
 }

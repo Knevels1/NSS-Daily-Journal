@@ -1,72 +1,82 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Daily Jounral</title>
-        <link rel="stylesheet" href="./styles/main.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Daily Jounral</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
 
-    <body>
-        <header>
-            <img class="image" src="./images/daily journal.jpg" height="200px" alt="dailyjournal">
-        </header>
-        <h2 class="name">Kyle Nevels</h2>
-
-        <section class="Container">
-            <h2>Daily Journal</h2>
-            <section class="forms_list">
-                <div class="form card">
-                    <form action="">
-                        <fieldset>
-                            <label for="journalDate"><B>Date of entry</B></label>
-                            <input class="formInfo" type="date" name="journalDate" id="journalDate">
-                        </fieldset>
-                    </form>
-                </div>
-                <div class="form card">
-                    <form action="">
-                        <fieldset>
-                            <label for="conceptsCovered"><B>Concepts covered</B></label>
-                            <input class="formInfo" input="text" name="conceptsCovered" id="conceptsCovered">
-                        </fieldset>
-                    </form>
-                </div>
-                <div class="form card">
-                    <form action="">
-                        <fieldset>
-                            <label for="journalEntry"><B>Journal Entry</B></label>
-                            <textarea class="formInfo" id="journalEntry" name="journalEntry" rows="2" cols="23">
-                            </textarea>
-                        </fieldset>
-                    </form>
-                </div>
-                <div class="form card">
-                    <form action="">
-                        <fieldset>
-                            <label for="mood"><B>Mood for the day</B></label>
-                            <select class="formInfo" name="moods" id="moods">
-                                <option value="happy">Happy</option>
-                                <option value="sad">Sad</option>
-                                <option value="angry">Angry</option>
-                                <option value="confused">Confused</option>
-                                <option value="calm">Calm</option>
-                            </select>
-                        </fieldset>
-                        <input class="submit" type="submit" value="Record Journal Entry">
-                    </form>
-                </div>
-            </section>
+<body>
+    <main id="container">
+            <header>
+                <img class="image" src="./images/daily journal.jpg" height="200px" alt="dailyjournal">
+                <h2 class="name">Kyle Nevels</h2>
+            </header>
             
-        </section>
-        <div class="footer">
-            <footer>
-                <p>©2020 The Daily Journal Inc. - <a href="https://github.com/Knevels1">GitHub profile Kyle Nevels</a></p>
-            </footer>
-        </div>
+
+            <section class="contentContainer">
+
+                <div class="contentContainer__left">
+                    <h2>Daily Journal</h2>
+                    <section class="forms_list">
+                        <div class="form card">
+                            <form action="">
+                                <fieldset>
+                                    <label for="journalDate"><B>Date of entry</B></label>
+                                    <input class="formInfo" type="date" name="journalDate" id="journalDate">
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="form card">
+                            <form action="">
+                                <fieldset>
+                                    <label for="conceptsCovered"><B>Concepts covered</B></label>
+                                    <input class="formInfo" input="text" name="conceptsCovered" id="conceptsCovered">
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="form card">
+                            <form action="">
+                                <fieldset>
+                                    <label for="journalEntry"><B>Journal Entry</B></label>
+                                    <textarea class="formInfo" id="journalEntry" name="journalEntry" rows="2" cols="23">
+                                    </textarea>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="form card">
+                            <form action="">
+                                <fieldset>
+                                    <label for="mood"><B>Mood for the day</B></label>
+                                    <select class="formInfo" name="moods" id="moods">
+                                        <option value="happy">Happy</option>
+                                        <option value="sad">Sad</option>
+                                        <option value="angry">Angry</option>
+                                        <option value="confused">Confused</option>
+                                        <option value="calm">Calm</option>
+                                    </select>
+                                </fieldset>
+                                <input class="submit" type="submit" value="Record Journal Entry">
+                            </form>
+                        </div>
+                    </section>
+                </div>
+                
+                <div class="entryLog">
+
+                </div>
+                
+            </section>
+                <div class="footer">
+                    <footer>
+                        <p>©2020 The Daily Journal Inc. - <a href="https://github.com/Knevels1">GitHub profile Kyle Nevels</a></p>
+                    </footer>
+                </div>
+    </main>
 
 
 
 
-        <script type="module" src="./scripts/main.js"></script>
-    </body>
+    <script type="module" src="./scripts/main.js"></script>
+</body>
 </html>
