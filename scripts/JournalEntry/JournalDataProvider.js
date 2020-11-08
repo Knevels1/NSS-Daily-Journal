@@ -17,13 +17,13 @@ export const getEntries = () => {
             allEntries = parsedEntries
         })
 }
-export const saveEntry = () => {
+export const saveEntry = (entry) => {
     return fetch ('http://localhost:8088/entries', {
         method: "POST",
         headers: {
             "content-Type": "application/json"
         },
-        body: JSON.stringify()
+        body: JSON.stringify(entry)
     })
     .then(getEntries)
     .then(dispatchStateChangeEvent)

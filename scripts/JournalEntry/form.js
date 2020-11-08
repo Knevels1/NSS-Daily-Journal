@@ -1,4 +1,4 @@
-import {saveEntry} from "./JournalDataProvider.js"
+import {saveEntry} from "../JournalEntry/JournalDataProvider.js"
 
 
 const eventHub = document.querySelector("#container")
@@ -11,13 +11,13 @@ export const JournalFormComponent = () => {
         <form action="">
         
                 <label for="journalDate"><B>Date of entry</B></label>
-                <input class="formInfo" type="date" name="journalDate" id="journalDate">
+                <input class="formInfo" type="date" name="journalDate" id="journal--date"/>
            
                 <label for="conceptsCovered"><B>Concepts covered</B></label>
-                <input class="formInfo" input="text" name="conceptsCovered" id="conceptsCovered">
+                <input class="formInfo" type="text" name="conceptsCovered" id="concepts--covered"/>
            
                 <label for="journalEntry"><B>Journal Entry</B></label>
-                <textarea id="entryText" class="formInfo" id="journalEntry" name="journalEntry" rows="2" cols="23">
+                <textarea id="entryText" class="formInfo" name="journalEntry" rows="2" cols="23">
                 </textarea>
            
                 <label for="mood"><B>Mood for the day</B></label>
@@ -33,13 +33,11 @@ export const JournalFormComponent = () => {
     </div>
     `
 }
-eventHub.addEventListener("click", clickEvent => {
-    console.log(clickEvent)
-    if(clickEvent.target.id === "recordEntry"){
-    const dateOfEntry = document.querySelector("#journalDate").value
-    const conceptCovered = document.querySelector("#conceptsCovered").value
-    const entry = document.querySelector("#entryText").value
-    const mood = parseInt(document.querySelector("#moods").value)
+eventHub.addEventListener("click", eventObj => {
+    if(eventObj.target.id === "recordEntry"){
+    const dateOfEntry = document.querySelector("#journal--date").value
+    const conceptCovered = document.querySelector("#concepts--covered").value
+    const entry = document.querySelector("#entryText").value 
     
     const newEntry = {
       dateOfEntry,
