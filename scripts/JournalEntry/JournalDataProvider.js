@@ -1,4 +1,4 @@
-const eventHub = document.querySelector(".container")
+const eventHub = document.querySelector("#container")
 
 const dispatchStateChangeEvent = () => {
     const entryStateChangeEvent = new CustomEvent("entryStateChanged")
@@ -17,13 +17,13 @@ export const getEntries = () => {
             allEntries = parsedEntries
         })
 }
-export const saveEntry = (entry) => {
+export const saveEntry = () => {
     return fetch ('http://localhost:8088/entries', {
         method: "POST",
         headers: {
             "content-Type": "application/json"
         },
-        body: JSON.stringify(entry)
+        body: JSON.stringify()
     })
     .then(getEntries)
     .then(dispatchStateChangeEvent)
